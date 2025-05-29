@@ -1,11 +1,17 @@
 <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
  <title>Logo</title>
-
+ <defs>
+  <style>
+   <![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+   ]]>
+  </style>
+ </defs>
  <g>
   <title>Layer 1</title>
   <rect id="svg_5" height="600" width="600" y="0" x="0" stroke-width="0" stroke="#000" fill="#096789"/>
   <path stroke-width="0" id="svg_2" d="m11.66665,589.91c0,-1.42335 45.17337,-123.83186 54.34923,-139.48874c9.17586,-15.65688 19.05755,-42.70061 67.05428,-48.39403c47.99674,-5.69342 170.81192,46.97069 170.10606,46.97068c0.70586,0.00002 170.10611,69.74438 285.15708,142.33543" opacity="NaN" stroke="#000" fill="#fff"/>
-  <text transform="matrix(1.28983, 0, 0, 1.54985, -8.1315, -136.98)" xml:space="preserve" text-anchor="start" font-family="'Bitter'" font-size="90" stroke-width="0" id="svg_3" y="257.99747" x="27.50037" stroke="#000" fill="#ffffff">DRUMLIN</text>
-  <text xml:space="preserve" text-anchor="start" font-family="'Bitter'" font-size="60" stroke-width="0" id="svg_4" y="332.00037" x="175.00004" stroke="#000" fill="#ffffff">Analytics, LLC</text>
+  <text transform="matrix(1.28983, 0, 0, 1.54985, -8.1315, -136.98)" xml:space="preserve" text-anchor="start" font-family="'Bitter', serif" font-size="90" stroke-width="0" id="svg_3" y="257.99747" x="27.50037" stroke="#000" fill="#ffffff">DRUMLIN</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Bitter', serif" font-size="60" stroke-width="0" id="svg_4" y="332.00037" x="175.00004" stroke="#000" fill="#ffffff">Analytics, LLC</text>
  </g>
 </svg>
