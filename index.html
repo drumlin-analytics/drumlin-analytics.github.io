@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background-color: #ffffff;
         }
 
         .container {
@@ -25,10 +25,9 @@
         }
 
         header {
-            background: #2c5f7c;
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #096789;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(44, 95, 124, 0.3);
         }
 
         nav {
@@ -38,8 +37,22 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: white;
             font-size: 1.5rem;
-            font-weight: bold;
+            font-weight: 600;
+            line-height: 1.3;
         }
 
         .nav-links {
@@ -52,68 +65,92 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         .nav-links a:hover {
-            color: #87ceeb;
+            color: #f0f0f0;
         }
 
         .nav-links a.active {
-            color: #87ceeb;
-            font-weight: 500;
+            color: #f0f0f0;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 2px;
         }
 
         main {
             padding: 3rem 0;
+            background: #f8f9fa;
+            min-height: calc(100vh - 200px);
         }
 
         .hero {
             text-align: center;
             margin-bottom: 3rem;
+            padding: 2rem 0;
         }
 
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #2c5f7c;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #666;
             margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .services {
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(44, 95, 124, 0.1);
             margin-bottom: 2rem;
         }
 
         .services h2 {
             color: #2c5f7c;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
         }
 
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .service-item {
-            padding: 1.5rem;
+            padding: 2rem;
             background: #f8f9fa;
-            border-radius: 6px;
-            border-left: 4px solid #2c5f7c;
+            border-radius: 8px;
+            border-top: 4px solid #2c5f7c;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(44, 95, 124, 0.15);
         }
 
         .service-item h3 {
             color: #2c5f7c;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .service-item p {
+            color: #555;
+            line-height: 1.6;
         }
 
         .page {
@@ -126,32 +163,50 @@
 
         .about-content {
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(44, 95, 124, 0.1);
             margin-bottom: 2rem;
         }
 
         .about-content h2 {
             color: #2c5f7c;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .about-content p {
             margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
 
         .contact-info {
             background: #2c5f7c;
             color: white;
-            padding: 2rem;
-            border-radius: 8px;
+            padding: 3rem 2rem;
+            border-radius: 12px;
             text-align: center;
         }
 
         .contact-info h3 {
             margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
 
         .contact-info a {
-            color: #87ceeb;
+            color: #f0f0f0;
             text-decoration: none;
+            font-weight: 500;
+            font-size: 1.2rem;
         }
 
         .contact-info a:hover {
@@ -159,11 +214,10 @@
         }
 
         footer {
-            background: #2c5f7c;
+            background: #096789;
             color: white;
             text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 3rem;
+            padding: 2rem 0;
         }
 
         @media (max-width: 768px) {
@@ -171,12 +225,43 @@
                 gap: 1rem;
             }
 
+            .logo {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .logo img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
 
+            .hero p {
+                font-size: 1.1rem;
+            }
+
             .service-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .services {
+                padding: 2rem 1rem;
+            }
+
+            .about-content {
+                padding: 2rem 1rem;
+            }
+
+            .contact-info {
+                padding: 2rem 1rem;
             }
         }
     </style>
@@ -184,7 +269,25 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Drumlin Analytics LLC</div>
+            <div class="logo">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+				 <defs>
+				  <style>
+				   <![CDATA[
+					@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+				   ]]>
+				  </style>
+				 </defs>
+				 <g>
+				  <title>Layer 1</title>
+				  <rect id="svg_5" height="600" width="600" y="0" x="0" stroke-width="0" stroke="#000" fill="#096789"/>
+				  <path stroke-width="0" id="svg_2" d="m11.66665,589.91c0,-1.42335 45.17337,-123.83186 54.34923,-139.48874c9.17586,-15.65688 19.05755,-42.70061 67.05428,-48.39403c47.99674,-5.69342 170.81192,46.97069 170.10606,46.97068c0.70586,0.00002 170.10611,69.74438 285.15708,142.33543" opacity="NaN" stroke="#000" fill="#fff"/>
+				  <text transform="matrix(1.28983, 0, 0, 1.54985, -8.1315, -136.98)" xml:space="preserve" text-anchor="start" font-family="'Bitter', serif" font-size="90" stroke-width="0" id="svg_3" y="257.99747" x="27.50037" stroke="#000" fill="#ffffff">DRUMLIN</text>
+				  <text xml:space="preserve" text-anchor="start" font-family="'Bitter', serif" font-size="60" stroke-width="0" id="svg_4" y="332.00037" x="175.00004" stroke="#000" fill="#ffffff">Analytics, LLC</text>
+				 </g>
+				</svg>
+                <div class="logo-text">Drumlin Analytics LLC</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
                 <li><a href="#" onclick="showPage('about')">About</a></li>
